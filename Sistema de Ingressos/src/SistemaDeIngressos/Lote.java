@@ -10,10 +10,11 @@ public class Lote {
     private List<Ingresso> ingressos;
     private double desconto;
 
+
     public Lote(int quantidade, double desconto, double percentualVIP, double percentualMeia) {
         this.id = ++idCounter;
         this.ingressos = new ArrayList<>();
-        this.desconto = desconto > 0.25 ? 0.25 : desconto;
+        this.desconto = Math.min(desconto, 0.25);
 
         int numVIP = (int) (quantidade * percentualVIP);
         int numMeia = (int) (quantidade * percentualMeia);

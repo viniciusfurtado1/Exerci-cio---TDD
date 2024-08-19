@@ -1,7 +1,7 @@
 package SistemaDeIngressos;
 
 // Enum para tipos de ingresso
-enum TipoIngresso {
+public enum TipoIngresso {
     VIP, NORMAL, MEIA_ENTRADA
 }
 
